@@ -1,13 +1,13 @@
 export default class Animal { 
 
-    constructor(private name: String){
+    constructor(private name: string){
     }
 
-    getName(): String {
+    getName(): string {
         return `Mr ${this.name}`;
     }
 
-    toString(): String{
+    toString(): string{
         return this.getName()
     }
 }

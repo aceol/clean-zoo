@@ -1,6 +1,6 @@
 import * as express from 'express';
 import {Application, Response, Request} from 'express';
-import {myRouter} from './router';
+import {myRouter} from './application/router';
 import * as bodyParser from 'body-parser';
 
 const PORT = process.env.PORT || 3000;
