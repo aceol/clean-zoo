@@ -1,5 +1,5 @@
 import Animal from "../entities/Animal"
 
-export function seeAnimals (zoo:Animal[]) : Animal[] {
-    return zoo;
+export function seeAnimals (animalRepository : IAnimalRepository) : Animal[] {
+    return animalRepository.getAll();
 }
