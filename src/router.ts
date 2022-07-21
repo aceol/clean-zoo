@@ -1,16 +1,11 @@
 import { Router, Request, Response } from 'express';
+import Animal from './domain/entities/Animal'
 
-const zoo: String[] = ['lapin', 'canard']
+const zoo: Animal[] = [new Animal('lapin'), new Animal('canard')]
 
 export const myRouter =  Router();
 myRouter.get('/', (req: Request, res: Response) => {
-  res.json(zoo);
-});
-
-myRouter.post('/', (req: Request, res: Response) => {
-  const animal = req.body;
-  const data = zoo.push(animal);
-  return res.json(data);
+  return res.json(zoo.map((animal: Animal): String => animal+''));
 });
 
 myRouter.get('/:id', (req: Request, res: Response) => {
